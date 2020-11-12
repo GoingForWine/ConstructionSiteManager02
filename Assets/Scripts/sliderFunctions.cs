@@ -83,6 +83,10 @@ public class sliderFunctions : MonoBehaviour
         {
             score = 100;
         }
+        else if (score <= 0)
+        {
+            score = 0;
+        }
 
         sliderNum.text = score.ToString();
     }
