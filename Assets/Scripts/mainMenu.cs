@@ -10,6 +10,21 @@ public class mainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void BackToOffice()
+    {
+        SceneManager.LoadScene("Office_Scene");
+    }
+
+    public void GoToSite()
+    {
+        SceneManager.LoadScene("Site_Scene");
+    }
+
+    public void GoToInteraction()
+    {
+        SceneManager.LoadScene("Interaction_Scene");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Game Quitted");
