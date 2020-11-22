@@ -5,9 +5,17 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField]
+    private GameObject disableButtonRight;
+    [SerializeField]
+    private GameObject disableButtonLeft;
+    [SerializeField]
+    private GameObject disableOfficeMenu;
+
+    [SerializeField]
     private Transform[] movementPoints;
     [SerializeField]
     private Transform[] rotationPoints;
+
 
     [SerializeField]
     private float movSpeed;
@@ -18,16 +26,18 @@ public class CameraMovement : MonoBehaviour
 
     private Rigidbody rigbody;
 
-    //private int desiredPoint; // This will be used another time
+
     private int selectedMovPoint;
     private int selectedRotPoint;
 
 
     private bool isMoving;
+    //private bool isMovingRight;
+
 
     // Rotation
-    private Quaternion rotationTarget1;
-    private Quaternion rotationTarget2;
+    private Quaternion rotationTargetMove;
+    private Quaternion rotationTargetRotation;
 
 
 
@@ -36,7 +46,7 @@ public class CameraMovement : MonoBehaviour
     {
         rigbody = GetComponent<Rigidbody>();
 
-        isMoving = true;
+        isMoving = false;
 
         saveMovSpeed = movSpeed;
     }
@@ -47,54 +57,124 @@ public class CameraMovement : MonoBehaviour
     {
         selectedRotPoint = selectedMovPoint; // Automatically set the current rotation point number, to the current movement point number
 
-        // When the camera reaches a certain movement point...
-        //if (transform.position == movementPoints[0].position)
-        //{
+        
+        // Movement Point 0
+        if (transform.position == movementPoints[0].position)
+        {
+            disableButtonRight.SetActive(true);
 
-        //}
-        //else if (transform.position == movementPoints[1].position)
-        //{
+            disableOfficeMenu.SetActive(true);
+        }
+        else if (transform.position != movementPoints[0].position)
+        {
+            disableOfficeMenu.SetActive(false);
+        }
 
-        //}
+        // Movement Point 1
+        if (transform.position == movementPoints[1].position)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
+       
 
-        // Rotation (smooth rotation)
+        // Movement Point 2
+        if (transform.position == movementPoints[2].position)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
+        
 
+        // Movement Point 3
+        if (transform.position == movementPoints[3].position)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
+        
+
+        // Movement Point 4
+        if (transform.position == movementPoints[4].position)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
+        
+
+        // Movement Point 5
+        if (transform.position == movementPoints[5].position)
+        {
+            disableButtonLeft.SetActive(true);
+        }
+
+        if (transform.position != movementPoints[selectedMovPoint].position)
+        {
+            disableButtonRight.SetActive(false);
+            disableButtonLeft.SetActive(false);
+        }
+        
+
+        //Debug.Log(selectedMovPoint);
+        //Debug.Log(selectedRotPoint);
+        //Debug.Log(movSpeed); 
+        //Debug.Log(isMoving);
     }
 
 
     void FixedUpdate()
     {
+        Rotation();
+
+        Movement();
+    }
+
+
+    private void Rotation()
+    {
         // Rotation (smooth rotation)
         if (isMoving == true && transform.position != movementPoints[selectedMovPoint].position)
         {
-            rotationTarget1 = Quaternion.LookRotation(movementPoints[selectedMovPoint].position - transform.position); // Movement points
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTarget1, rotSpeed * Time.deltaTime); // Rotate towards the movement points
+            rotationTargetMove = Quaternion.LookRotation(movementPoints[selectedMovPoint].position - transform.position); // Movement points
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTargetMove, rotSpeed * Time.deltaTime); // Rotate towards the movement points
         }
         else
         {
-            rotationTarget2 = Quaternion.LookRotation(rotationPoints[selectedRotPoint].position - transform.position); // Rotation points
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTarget2, rotSpeed * Time.deltaTime); // Rotate towards the rotation points
+            rotationTargetRotation = Quaternion.LookRotation(rotationPoints[selectedRotPoint].position - transform.position); // Rotation points
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTargetRotation, rotSpeed * Time.deltaTime); // Rotate towards the rotation points
         }
+    }
 
+    private void Movement()
+    {
+        // Wait until camera has rotated to face the direction of the next point before moving
+        //if (transform.rotation == rotationTargetMove)
+        //{
+        //    // Move until you reach the current object/waypoint, and then stop moving
+        //    if (transform.position != movementPoints[selectedMovPoint].position)
+        //    {
+        //        movSpeed = saveMovSpeed;
 
+        //        Vector3 pos = Vector3.MoveTowards(transform.position, movementPoints[selectedMovPoint].position, movSpeed * Time.deltaTime);
+        //        rigbody.MovePosition(pos);
+        //    }
+        //}
 
-        // Wait until camera has rotation in the direction of the next point before moving
-        if (transform.rotation == rotationTarget1)
+        if (transform.position != movementPoints[selectedMovPoint].position)
         {
-            movSpeed = saveMovSpeed;
-
-            // Move until you reach the current object/waypoint, and then stop moving
-            if (transform.position != movementPoints[selectedMovPoint].position)
+            if (transform.rotation == rotationTargetMove)
             {
+                movSpeed = saveMovSpeed;
+
                 Vector3 pos = Vector3.MoveTowards(transform.position, movementPoints[selectedMovPoint].position, movSpeed * Time.deltaTime);
                 rigbody.MovePosition(pos);
             }
-            else
-            {
-                isMoving = false;
+        }
+        else
+        {
+            isMoving = false;
 
-                movSpeed = 0;
-            }
+            movSpeed = 0f;   
         }
 
     }
@@ -106,6 +186,10 @@ public class CameraMovement : MonoBehaviour
         selectedMovPoint = (selectedMovPoint + 1) % movementPoints.Length;
 
         isMoving = true;
+
+        // Disable buttons on HUD
+        //disableButtonRight.SetActive(false);
+        //disableButtonLeft.SetActive(false);
     }
 
     public void PressLeft()
@@ -113,5 +197,9 @@ public class CameraMovement : MonoBehaviour
         selectedMovPoint = (selectedMovPoint - 1) % movementPoints.Length;
 
         isMoving = true;
+
+        //// Disable buttons on HUD
+        //disableButtonRight.SetActive(false);
+        //disableButtonLeft.SetActive(false);
     }
 }
