@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour
+public class CameraMovement_SmoothMovement : MonoBehaviour
 {
     [SerializeField]
     private GameObject disableButtonRight;
@@ -58,75 +58,62 @@ public class CameraMovement : MonoBehaviour
         selectedRotPoint = selectedMovPoint; // Automatically set the current rotation point number, to the current movement point number
 
 
-        
-        // If the camera position is equal to the movement point position, and if the camera is rotating towards a rotation point, and if isMoving is set to false, then...
         // Movement Point 0
-        if (transform.position == movementPoints[0].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        if (transform.position == movementPoints[0].position)
         {
             disableButtonRight.SetActive(true);
 
             disableOfficeMenu.SetActive(true);
         }
-        else if (transform.position != movementPoints[selectedMovPoint].position && transform.rotation != rotationTargetRotation && isMoving == true)
+        else if (transform.position != movementPoints[0].position)
         {
             disableOfficeMenu.SetActive(false);
         }
 
         // Movement Point 1
-        if (transform.position == movementPoints[1].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        if (transform.position == movementPoints[1].position)
         {
             disableButtonRight.SetActive(true);
             disableButtonLeft.SetActive(true);
         }
-       
+
 
         // Movement Point 2
-        if (transform.position == movementPoints[2].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        if (transform.position == movementPoints[2].position)
         {
             disableButtonRight.SetActive(true);
             disableButtonLeft.SetActive(true);
         }
-        
+
 
         // Movement Point 3
-        if (transform.position == movementPoints[3].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        if (transform.position == movementPoints[3].position)
         {
             disableButtonRight.SetActive(true);
             disableButtonLeft.SetActive(true);
         }
-        
+
 
         // Movement Point 4
-        if (transform.position == movementPoints[4].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        if (transform.position == movementPoints[4].position)
         {
             disableButtonRight.SetActive(true);
             disableButtonLeft.SetActive(true);
         }
-        
+
 
         // Movement Point 5
-        if (transform.position == movementPoints[5].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        {
-            disableButtonLeft.SetActive(true);
-            disableButtonRight.SetActive(true);
-        }
-
-
-        // Movement Point 6
-        if (transform.position == movementPoints[6].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        if (transform.position == movementPoints[5].position)
         {
             disableButtonLeft.SetActive(true);
         }
-
-
-
 
         if (transform.position != movementPoints[selectedMovPoint].position)
         {
             disableButtonRight.SetActive(false);
             disableButtonLeft.SetActive(false);
         }
-        
+
 
         //Debug.Log(selectedMovPoint);
         //Debug.Log(selectedRotPoint);
@@ -158,7 +145,6 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
-
     private void Movement()
     {
         // Wait until camera has rotated to face the direction of the next point before moving
@@ -174,10 +160,8 @@ public class CameraMovement : MonoBehaviour
         //    }
         //}
 
-        // Move until you reach the current object/waypoint, and then stop moving
         if (transform.position != movementPoints[selectedMovPoint].position)
         {
-            // Wait until camera has rotated to face the direction of the next point before moving
             if (transform.rotation == rotationTargetMove)
             {
                 movSpeed = saveMovSpeed;
@@ -190,7 +174,7 @@ public class CameraMovement : MonoBehaviour
         {
             isMoving = false;
 
-            movSpeed = 0f;   
+            movSpeed = 0f;
         }
 
     }
@@ -203,7 +187,9 @@ public class CameraMovement : MonoBehaviour
 
         isMoving = true;
 
-        
+        // Disable buttons on HUD
+        //disableButtonRight.SetActive(false);
+        //disableButtonLeft.SetActive(false);
     }
 
     public void PressLeft()
@@ -212,6 +198,9 @@ public class CameraMovement : MonoBehaviour
 
         isMoving = true;
 
-        
+        //// Disable buttons on HUD
+        //disableButtonRight.SetActive(false);
+        //disableButtonLeft.SetActive(false);
     }
 }
+
