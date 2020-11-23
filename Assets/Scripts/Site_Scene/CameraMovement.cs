@@ -131,74 +131,11 @@ public class CameraMovement : MonoBehaviour
             disableButtonLeft.SetActive(false);
         }
 
-        //// If the camera position is equal to the movement point position, and if the camera is rotating towards a rotation point, and if isMoving is set to false, then...
-        //// Movement Point 0
-        //if (transform.position == movementPoints[0].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        //{
-        //    Debug.Log("This is working!");
-
-        //    disableButtonRight.SetActive(true);
-
-        //    disableOfficeMenu.SetActive(true);
-        //}
-        //else if (transform.position != movementPoints[0].position && transform.rotation != rotationTargetRotation && isMoving == true)
-        //{
-        //    Debug.Log("This is NOT working!");
-
-        //    disableOfficeMenu.SetActive(false);
-        //}
-
-
-        //// Movement Point 1
-        //if (transform.position == movementPoints[1].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        //{
-        //    disableButtonRight.SetActive(true);
-        //    disableButtonLeft.SetActive(true);
-        //}
-
-
-        //// Movement Point 2
-        //if (transform.position == movementPoints[2].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        //{
-        //    disableButtonRight.SetActive(true);
-        //    disableButtonLeft.SetActive(true);
-        //}
-
-
-        //// Movement Point 3
-        //if (transform.position == movementPoints[3].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        //{
-        //    disableButtonRight.SetActive(true);
-        //    disableButtonLeft.SetActive(true);
-        //}
-
-
-        //// Movement Point 4
-        //if (transform.position == movementPoints[4].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        //{
-        //    disableButtonRight.SetActive(true);
-        //    disableButtonLeft.SetActive(true);
-        //}
-
-
-        //// Movement Point 5
-        //if (transform.position == movementPoints[5].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        //{
-        //    disableButtonLeft.SetActive(true);
-        //    disableButtonRight.SetActive(true);
-        //}
-
-
-        //// Movement Point 6
-        //if (transform.position == movementPoints[6].position && transform.rotation == rotationTargetRotation && isMoving == false)
-        //{
-        //    disableButtonLeft.SetActive(true);
-        //}
-
+        
 
 
         //Debug.Log(selectedMovPoint);
-        Debug.Log(selectedRotPoint);
+        ///Debug.Log(selectedRotPoint);
         //Debug.Log(movSpeed); 
         //Debug.Log(isMoving);
     }
