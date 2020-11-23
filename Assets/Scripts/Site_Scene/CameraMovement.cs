@@ -198,7 +198,7 @@ public class CameraMovement : MonoBehaviour
 
 
         //Debug.Log(selectedMovPoint);
-        Debug.Log(selectedRotPoint);
+        //Debug.Log(selectedRotPoint);
         //Debug.Log(movSpeed); 
         //Debug.Log(isMoving);
     }
