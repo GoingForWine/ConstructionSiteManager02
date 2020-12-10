@@ -4775,12 +4775,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactMenu: {fileID: 1402076866}
---- !u!4 &1272946975 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7fe7992a94e0fd24aad5668db8f9b738,
-    type: 3}
-  m_PrefabInstance: {fileID: 384590818}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273760305
 GameObject:
   m_ObjectHideFlags: 0
