@@ -1,198 +1,280 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PathCreation.Examples;
 
 public class CameraMovement : MonoBehaviour
 {
-    public GameObject disableButtonRight;
-    public GameObject disableButtonLeft;
-    public GameObject disableOfficeMenu;
+    [SerializeField]
+    private GameObject disableButtonRight;
+    [SerializeField]
+    private GameObject disableButtonLeft;
+    [SerializeField]
+    private GameObject disableOfficeMenu;
 
     [SerializeField]
     private Transform[] movementPoints;
+    [SerializeField]
+    private float movSpeed;
+    private float saveMovSpeed; // Save the currently set move speed (so you just have to use 'movSpeed = saveMovSpeed', instead of 'movSpeed = (value)', it just makes things easier
 
     [SerializeField]
-    private Transform[] startingRotationPoints;
-
-    [SerializeField]
-    private Transform[] endingRotationPoints;
-
+    private Transform[] rotationPoints;
     [SerializeField]
     private float rotSpeed;
 
-    public sbyte selectedMovPoint;
-    public sbyte selectedRotPoint;
 
-    public bool isMoving;
+    private Rigidbody rigbody;
 
+
+    private int selectedMovPoint;
+    private int selectedRotPoint;
+
+
+    private bool isMoving;
+    //private bool isMovingRight;
+
+
+    // Rotation
     private Quaternion rotationTargetMove;
     private Quaternion rotationTargetRotation;
 
-    public PathFollower x;
-    bool rightDirection;
-    private Quaternion rotationX;
-    //x -0.03919389
-    //y  0.7060199
-    //z -0.03919391
-    //w -0.7060195
+
+
 
     void Start()
     {
+        rigbody = GetComponent<Rigidbody>();
+
         isMoving = false;
-        rotationX.x = -0.03919389f;
-        rotationX.y = 0.7060199f;
-        rotationX.z = -0.03919391f;
-        rotationX.w = -0.7060195f;
+
+        saveMovSpeed = movSpeed;
     }
 
+
+    // Update is called once per frame
     void Update()
     {
         selectedRotPoint = selectedMovPoint; // Automatically set the current rotation point number, to the current movement point number
 
-        DisableOfficeUI();
-        DisableArrows();
+
+        // If the camera is rotating towards a rotation point, and if isMoving is set to false, then...
+        if (transform.rotation == rotationTargetRotation && isMoving == false)
+        {
+            //Debug.Log("This is being accessed!!!!!!!!!!!!");
+
+            // Movement Point 0
+            if (transform.position == movementPoints[0].position)// && transform.rotation == rotationTargetRotation && isMoving == false)
+            {
+                disableButtonRight.SetActive(true);
+
+                disableOfficeMenu.SetActive(true);
+            }
+
+
+            // Movement Point 1
+            if (transform.position == movementPoints[1].position)// && transform.rotation == rotationTargetRotation && isMoving == false)
+            {
+                disableButtonRight.SetActive(true);
+                disableButtonLeft.SetActive(true);
+            }
+
+
+            // Movement Point 2
+            if (transform.position == movementPoints[2].position)//  && transform.rotation == rotationTargetRotation && isMoving == false)
+            {
+                disableButtonRight.SetActive(true);
+                disableButtonLeft.SetActive(true);
+            }
+
+
+            // Movement Point 3
+            if (transform.position == movementPoints[3].position)//  && transform.rotation == rotationTargetRotation && isMoving == false)
+            {
+                disableButtonRight.SetActive(true);
+                disableButtonLeft.SetActive(true);
+            }
+
+
+            // Movement Point 4
+            if (transform.position == movementPoints[4].position)//  && transform.rotation == rotationTargetRotation && isMoving == false)
+            {
+                disableButtonRight.SetActive(true);
+                disableButtonLeft.SetActive(true);
+            }
+
+
+            // Movement Point 5
+            if (transform.position == movementPoints[5].position)//  && transform.rotation == rotationTargetRotation && isMoving == false)
+            {
+                disableButtonLeft.SetActive(true);
+                disableButtonRight.SetActive(true);
+            }
+
+
+            // Movement Point 6
+            if (transform.position == movementPoints[6].position)//  && transform.rotation == rotationTargetRotation && isMoving == false)
+            {
+                disableButtonLeft.SetActive(true);
+            }
+        }
         
-        Rotation();
-    }
-
-    public void Rotation()
-    {
-        // Rotation (smooth rotation)
-        if (isMoving)
-        {
-            if (selectedMovPoint == 7)
-            {
-                rotationTargetMove = Quaternion.LookRotation(startingRotationPoints[6].position - transform.position); // Movement points
-            }
-            else if (selectedMovPoint == 1 || selectedMovPoint == 0)
-            {
-                rotationTargetMove = Quaternion.LookRotation(startingRotationPoints[0].position - transform.position); // Movement points
-            }
-            else
-            {
-                if (rightDirection)       //if moving right or left -> rotate to the correct startingrotationpoint from the array
-                {
-                    rotationTargetMove = Quaternion.LookRotation(startingRotationPoints[selectedMovPoint - 1].position - transform.position); // Movement points
-                }
-                else
-                {
-                    rotationTargetMove = Quaternion.LookRotation(startingRotationPoints[selectedMovPoint].position - transform.position); // Movement points
-                }
-            }
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTargetMove, rotSpeed * Time.deltaTime); // Rotate towards the movement points
-        }
-        else
-        {
-            GetComponent<PathFollower>().enabled = false;
-            rotationTargetRotation = Quaternion.LookRotation(endingRotationPoints[selectedRotPoint].position - transform.position); // Rotation points
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTargetRotation, rotSpeed * Time.deltaTime); // Rotate towards the rotation points
-        }
-    }
-
-    void Movement()
-    {
-        GetComponent<PathFollower>().enabled = true;
-        for (sbyte i = 0; i < movementPoints.Length; i++)
-        {
-            if (transform.position == movementPoints[i].position)
-            {
-                if (rightDirection)
-                {
-                    x.pathInMotion = x.paths[i * 2];
-                }
-                else
-                {
-                    x.pathInMotion = x.paths[i * 2 - 1];
-                }
-            }
-        }
-        x.distanceTravelled = 0;
-    }
-
-    // Buttons
-    public void PressRight()
-    {
-        selectedMovPoint++;
-        isMoving = true;
-        rightDirection = true;
-
-        GetComponent<PathFollower>().enabled = false;
-
-        Invoke("Movement", 0.8f);
-    }
-
-    public void PressLeft()
-    {
-        selectedMovPoint--;
-        isMoving = true;
-        rightDirection = false;
-
-        GetComponent<PathFollower>().enabled = false;
-
-        Invoke("Movement", 0.8f);
-    }
-
-    void DisableOfficeUI()
-    {
-        ////disable officeMenu
-        //if (transform.position != movementPoints[0].position 
-        //    || transform.rotation != Quaternion.LookRotation(endingRotationPoints[0].position - transform.position)
-        //    || transform.rotation != rotationX)
-        //{
-        //    print('s');
-        //    disableOfficeMenu.SetActive(false);
-
-        //    print("transform rotation" + transform.rotation);
-        //    print("quartertion" + Quaternion.LookRotation(endingRotationPoints[0].position - transform.position));
-        //    print(transform.rotation != Quaternion.LookRotation(endingRotationPoints[0].position - transform.position));
-        //}
-        //else
-        //{
-        //    print('l');
-        //    disableOfficeMenu.SetActive(true);
-
-        //    print("transform rotation" + transform.rotation);
-        //    print("quartertion" + Quaternion.LookRotation(endingRotationPoints[0].position - transform.position));
-        //    print(transform.rotation != Quaternion.LookRotation(endingRotationPoints[0].position - transform.position));
-        //}
-
-        //disable officeMenu
-        if (transform.rotation == Quaternion.LookRotation(endingRotationPoints[0].position - transform.position) || transform.rotation == rotationX)
-        {
-            disableOfficeMenu.SetActive(true);
-        }
-        else
+        
+        if (transform.position == movementPoints[0].position && transform.rotation != rotationTargetRotation && isMoving == true)
         {
             disableOfficeMenu.SetActive(false);
         }
-    }
 
-    void DisableArrows()
-    {
-        //disable and enable buttonsUI
+
         if (transform.position != movementPoints[selectedMovPoint].position)
         {
             disableButtonRight.SetActive(false);
             disableButtonLeft.SetActive(false);
         }
-        else if (transform.position == movementPoints[0].position)
+
+        //// If the camera position is equal to the movement point position, and if the camera is rotating towards a rotation point, and if isMoving is set to false, then...
+        //// Movement Point 0
+        //if (transform.position == movementPoints[0].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        //{
+        //    Debug.Log("This is working!");
+
+        //    disableButtonRight.SetActive(true);
+
+        //    disableOfficeMenu.SetActive(true);
+        //}
+        //else if (transform.position != movementPoints[0].position && transform.rotation != rotationTargetRotation && isMoving == true)
+        //{
+        //    Debug.Log("This is NOT working!");
+
+        //    disableOfficeMenu.SetActive(false);
+        //}
+
+
+        //// Movement Point 1
+        //if (transform.position == movementPoints[1].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        //{
+        //    disableButtonRight.SetActive(true);
+        //    disableButtonLeft.SetActive(true);
+        //}
+
+
+        //// Movement Point 2
+        //if (transform.position == movementPoints[2].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        //{
+        //    disableButtonRight.SetActive(true);
+        //    disableButtonLeft.SetActive(true);
+        //}
+
+
+        //// Movement Point 3
+        //if (transform.position == movementPoints[3].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        //{
+        //    disableButtonRight.SetActive(true);
+        //    disableButtonLeft.SetActive(true);
+        //}
+
+
+        //// Movement Point 4
+        //if (transform.position == movementPoints[4].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        //{
+        //    disableButtonRight.SetActive(true);
+        //    disableButtonLeft.SetActive(true);
+        //}
+
+
+        //// Movement Point 5
+        //if (transform.position == movementPoints[5].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        //{
+        //    disableButtonLeft.SetActive(true);
+        //    disableButtonRight.SetActive(true);
+        //}
+
+<<<<<<< HEAD
+        //disable officeMenu
+        if (transform.rotation == Quaternion.LookRotation(endingRotationPoints[0].position - transform.position) || transform.rotation == rotationX)
+=======
+
+        //// Movement Point 6
+        //if (transform.position == movementPoints[6].position && transform.rotation == rotationTargetRotation && isMoving == false)
+        //{
+        //    disableButtonLeft.SetActive(true);
+        //}
+
+
+
+        //Debug.Log(selectedMovPoint);
+        //Debug.Log(selectedRotPoint);
+        //Debug.Log(movSpeed); 
+        //Debug.Log(isMoving);
+    }
+
+
+    void FixedUpdate()
+    {
+        Rotation();
+
+        Movement();
+    }
+
+
+    private void Rotation()
+    {
+        // Rotation (smooth rotation)
+        if (isMoving == true && transform.position != movementPoints[selectedMovPoint].position)
+>>>>>>> parent of 5099de5... Merge branch '3rdPrototypeBranch' into 4thPrototypeBranch
         {
-            disableButtonRight.SetActive(true);
-            disableButtonLeft.SetActive(false);
-            isMoving = false;
-        }
-        else if (transform.position == movementPoints[6].position)
-        {
-            disableButtonRight.SetActive(false);
-            disableButtonLeft.SetActive(true);
-            isMoving = false;
+            rotationTargetMove = Quaternion.LookRotation(movementPoints[selectedMovPoint].position - transform.position); // Movement points
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTargetMove, rotSpeed * Time.deltaTime); // Rotate towards the movement points
         }
         else
         {
-            disableButtonRight.SetActive(true);
-            disableButtonLeft.SetActive(true);
-            isMoving = false;
+            rotationTargetRotation = Quaternion.LookRotation(rotationPoints[selectedRotPoint].position - transform.position); // Rotation points
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTargetRotation, rotSpeed * Time.deltaTime); // Rotate towards the rotation points
         }
+    }
+
+
+    private void Movement()
+    {
+        // Move until you reach the current object/waypoint, and then stop moving
+        if (transform.position != movementPoints[selectedMovPoint].position)
+        {
+            // Wait until camera has rotated to face the direction of the next point before moving
+            if (transform.rotation == rotationTargetMove)
+            {
+                movSpeed = saveMovSpeed;
+
+                Vector3 pos = Vector3.MoveTowards(transform.position, movementPoints[selectedMovPoint].position, movSpeed * Time.deltaTime);
+                rigbody.MovePosition(pos);
+            }
+        }
+        else
+        {
+            isMoving = false;
+
+            movSpeed = 0f;   
+        }
+
+    }
+
+
+    // Buttons
+    public void PressRight()
+    {
+        selectedMovPoint = (selectedMovPoint + 1) % movementPoints.Length;
+        //selectedRotPoint = (selectedRotPoint + 1) % rotationPoints.Length;
+
+        isMoving = true;
+
+        
+    }
+
+    public void PressLeft()
+    {
+        selectedMovPoint = (selectedMovPoint - 1) % movementPoints.Length;
+        //selectedRotPoint = (selectedRotPoint - 1) % rotationPoints.Length;
+
+        isMoving = true;
+
+        
     }
 }
