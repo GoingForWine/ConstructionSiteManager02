@@ -189,6 +189,9 @@ public class CameraMovement : MonoBehaviour
         //}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e60ea40... Merge pull request #3 from GoingForWine/4thPrototypeBranch
         //disable officeMenu
         if (transform.rotation == Quaternion.LookRotation(endingRotationPoints[0].position - transform.position) || transform.rotation == rotationX)
 =======
