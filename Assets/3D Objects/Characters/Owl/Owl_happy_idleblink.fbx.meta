@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: cd4dae202e8e3d542b3d1522ffb352c9
+guid: 9089962da8ecd454ba85ee8115951cfe
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Angry_anim
+    second: happyidle_anim
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,18 +35,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Angry_anim
+      name: happyidle_anim
       takeName: Take 001
       internalID: 0
       firstFrame: 0
-      lastFrame: 576
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
