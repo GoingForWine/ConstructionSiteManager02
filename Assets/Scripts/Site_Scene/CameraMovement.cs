@@ -156,7 +156,7 @@ public class CameraMovement : MonoBehaviour
         //    print("quartertion" + Quaternion.LookRotation(endingRotationPoints[0].position - transform.position));
         //    print(transform.rotation != Quaternion.LookRotation(endingRotationPoints[0].position - transform.position));
         //}
-        
+
         //disable officeMenu
         if (transform.rotation == Quaternion.LookRotation(endingRotationPoints[0].position - transform.position) || transform.rotation == rotationX)
         {
