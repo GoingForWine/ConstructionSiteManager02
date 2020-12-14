@@ -7,23 +7,25 @@ public class CharacterInteract : MonoBehaviour
     [SerializeField]
     private GameObject interactMenu;
 
-    private bool hasBeenPressed;
+    private int hasBeenPressedOnce = 0;
 
-    // Update is called once per frame
-    void Update()
+    
+    // Register when player clicks/touches character
+    private void OnMouseDown()
     {
-        if (hasBeenPressed == true)
+        hasBeenPressedOnce++;
+
+        if (hasBeenPressedOnce == 1)
         {
             //Debug.Log("Press has been registered");
             interactMenu.SetActive(true);
 
-            hasBeenPressed = false;
-        }
-    }
+            hasBeenPressedOnce++;
 
-    // Register when player clicks/touches character
-    private void OnMouseDown()
-    {
-        hasBeenPressed = true;
+        }
+        else if (hasBeenPressedOnce > 1)
+        {
+            hasBeenPressedOnce = 2;
+        }
     }
 }

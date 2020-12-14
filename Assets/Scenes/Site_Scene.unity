@@ -7037,6 +7037,32 @@ MonoBehaviour:
   responseButton1: {fileID: 2004349961}
   responseButton2: {fileID: 104149792}
   responseButton3: {fileID: 1562570462}
+--- !u!65 &1528336375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528336372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7336415, y: 1.5630554, z: 0.69568735}
+  m_Center: {x: 0.0072150873, y: 0.96488506, z: 0.017349781}
+--- !u!114 &1528336376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528336372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a986bb08203171446bddc73c5904a5d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactMenu: {fileID: 1402076866}
 --- !u!1 &1542114194
 GameObject:
   m_ObjectHideFlags: 0
