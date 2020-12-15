@@ -92,7 +92,7 @@ public class CameraMovement : MonoBehaviour
 
     void Movement()
     {
-        GetComponent<PathFollower>().enabled = true;
+        //GetComponent<PathFollower>().enabled = true;
         for (sbyte i = 0; i < movementPoints.Length; i++)
         {
             if (transform.position == movementPoints[i].position)
