@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 23b38051bc6d56540baa920d9a1cf6cf
+  m_OcclusionCullingData: {fileID: 36300000, guid: f197d0ac98a56f1458012e6d4b624bc7, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08cb8f3d6c617b34b90046163fd9128f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9006330722969168453, guid: 08cb8f3d6c617b34b90046163fd9128f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -552,6 +556,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 241c14aa1d4d66d4b8cdee598b808da3, type: 3}
       propertyPath: m_Name
       value: streetLamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 241c14aa1d4d66d4b8cdee598b808da3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 241c14aa1d4d66d4b8cdee598b808da3, type: 3}
@@ -1199,6 +1207,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: efbce23b7023c69418b752d81abcb3e9, type: 3}
       propertyPath: m_Name
       value: All props
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efbce23b7023c69418b752d81abcb3e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1382260879747928664, guid: efbce23b7023c69418b752d81abcb3e9, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2177,6 +2189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpenStorage
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e1c2183ce34e2f48ac267bbcfd45b45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e1c2183ce34e2f48ac267bbcfd45b45, type: 3}
 --- !u!1 &353997267
@@ -2379,6 +2395,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5d0d6b845763d74fb61cdd26351787e, type: 3}
       propertyPath: m_Name
       value: Pipes2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5d0d6b845763d74fb61cdd26351787e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5d0d6b845763d74fb61cdd26351787e, type: 3}
@@ -5374,6 +5394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toilets
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83b46f791a91fcb4a8355f7054baa6d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83b46f791a91fcb4a8355f7054baa6d5, type: 3}
 --- !u!1 &948138948
@@ -5563,6 +5587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crane1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73dffedc93398ea43a18e8d25b60a39a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73dffedc93398ea43a18e8d25b60a39a, type: 3}
 --- !u!1001 &987446494
@@ -5631,6 +5659,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60c207a8231b1ad4293d4dbc1e6710e5, type: 3}
       propertyPath: m_Name
       value: vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60c207a8231b1ad4293d4dbc1e6710e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60c207a8231b1ad4293d4dbc1e6710e5, type: 3}
@@ -5944,6 +5976,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5ebd7658c3ca5a74fa945bc365a83b07, type: 3}
       propertyPath: m_Name
       value: trowel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ebd7658c3ca5a74fa945bc365a83b07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebd7658c3ca5a74fa945bc365a83b07, type: 3}
@@ -6300,6 +6336,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7bb81152304cf646a7864aa125a5a64, type: 3}
       propertyPath: m_Name
       value: Timber1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7bb81152304cf646a7864aa125a5a64, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7bb81152304cf646a7864aa125a5a64, type: 3}
@@ -9047,6 +9087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: construction site final (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10d67c7d083f6d24eb621999f36ede9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1379668609314247500, guid: 10d67c7d083f6d24eb621999f36ede9c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9143,6 +9187,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65ea8e199df271f4782a09b72d87dc24, type: 3}
       propertyPath: m_Name
       value: ClosedStorage
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65ea8e199df271f4782a09b72d87dc24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65ea8e199df271f4782a09b72d87dc24, type: 3}
@@ -9300,6 +9348,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 65c9569581ed4a14aad62daaaea2affe, type: 3}
       propertyPath: m_Name
       value: Bricks
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 65c9569581ed4a14aad62daaaea2affe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65c9569581ed4a14aad62daaaea2affe, type: 3}
@@ -9873,6 +9925,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 51c67fcc7ea0d5f47abb99a1ac27f69f, type: 3}
       propertyPath: m_Name
       value: OpenStorageWprops
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51c67fcc7ea0d5f47abb99a1ac27f69f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2744620724394683066, guid: 51c67fcc7ea0d5f47abb99a1ac27f69f, type: 3}
       propertyPath: m_Materials.Array.data[0]
