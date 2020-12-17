@@ -815,7 +815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Send everyone out to search for the tool storage key
+  m_text: You can deal with it yourselves, I don't have time
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3697,10 +3697,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '''Ey Boss, me and the boys are trying to get into the tool storage room,
-    but the door is locked. Problem is, we don''t know who last had the key, nowhere
-    to be found it is. I ain''t sending my guys out there without tools, what do
-    we do?'
+  m_text: '*Bark* Boss! Me and a couple of the pups have been trying to get these
+    pipes moved. Any chance you can get us access to the crane?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3727,7 +3725,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.15
+  m_fontSize: 24.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6182,8 +6180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'Damn, that''s a little extreme, but if that''s what you think is best
-    boss, we''ll get right to it. Better hope you don''t get in trouble though *guffaw* '
+  fullText: '*Bark* Hah, thanks anyway - it was worth a shot! '
 --- !u!114 &598626140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7353,7 +7350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Break open the look, force entry to the storage
+  m_text: I can go check for you, but I think it's in use
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10803,8 +10800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'Seriously? I just said we have no idea where the key is, and this is
-    just losing time, but alright I suppose, you''re the boss '
+  fullText: '*Bark* Are you serious? We''re already behind schedule and now you''re
+    making me deal with this? '
 --- !u!114 &1065796984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12764,7 +12761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Purchase replacements for all of the tools immediately
+  m_text: Sure! Go ahead and bring it round here - they don't need it anymore!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16248,8 +16245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'Wow... okay umm... that can work boss, we can get back to work immediately.
-    Can we really afford this? *jokingly* ... ey'' can I get a raise? '
+  fullText: '*Bark* Oh wow, thank you! That''ll help us greatly! '
 --- !u!114 &1816855982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17094,7 +17090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1964744297
 RectTransform:
   m_ObjectHideFlags: 0
