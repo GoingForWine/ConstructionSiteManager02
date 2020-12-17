@@ -8,6 +8,10 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
     private GameObject disableButtonRight;
     [SerializeField]
     private GameObject disableButtonLeft;
+    //[SerializeField]
+    //private GameObject disableButtonUp;
+    //[SerializeField]
+    //private GameObject disableButtonDown;
     [SerializeField]
     private GameObject disableOfficeMenu;
 
@@ -26,8 +30,9 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
 
     private Rigidbody rigbody;
 
-
+    [SerializeField]
     private int selectedMovPoint;
+    [SerializeField]
     private int selectedRotPoint;
 
 
@@ -59,56 +64,58 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
 
 
         // Movement Point 0
-        if (transform.position == movementPoints[0].position)
+        if (transform.position == movementPoints[0].position && isMoving == false)
         {
             disableButtonRight.SetActive(true);
 
             disableOfficeMenu.SetActive(true);
         }
-        else if (transform.position != movementPoints[0].position)
+        else if (transform.position != movementPoints[0].position || isMoving == true)
         {
             disableOfficeMenu.SetActive(false);
         }
 
         // Movement Point 1
-        if (transform.position == movementPoints[1].position)
+        if (transform.position == movementPoints[1].position && isMoving == false)
         {
             disableButtonRight.SetActive(true);
             disableButtonLeft.SetActive(true);
         }
 
 
-        // Movement Point 2
-        if (transform.position == movementPoints[2].position)
-        {
-            disableButtonRight.SetActive(true);
-            disableButtonLeft.SetActive(true);
-        }
+        //// Movement Point 2
+        //if (transform.position == movementPoints[2].position)
+        //{
+        //    disableButtonRight.SetActive(true);
+        //    disableButtonLeft.SetActive(true);
+        //}
 
 
-        // Movement Point 3
-        if (transform.position == movementPoints[3].position)
-        {
-            disableButtonRight.SetActive(true);
-            disableButtonLeft.SetActive(true);
-        }
+        //// Movement Point 3
+        //if (transform.position == movementPoints[3].position)
+        //{
+        //    disableButtonRight.SetActive(true);
+        //    disableButtonLeft.SetActive(true);
+        //}
 
 
-        // Movement Point 4
-        if (transform.position == movementPoints[4].position)
-        {
-            disableButtonRight.SetActive(true);
-            disableButtonLeft.SetActive(true);
-        }
+        //// Movement Point 4
+        //if (transform.position == movementPoints[4].position)
+        //{
+        //    disableButtonRight.SetActive(true);
+        //    disableButtonLeft.SetActive(true);
+        //}
 
 
-        // Movement Point 5
-        if (transform.position == movementPoints[5].position)
-        {
-            disableButtonLeft.SetActive(true);
-        }
+        //// Movement Point 5
+        //if (transform.position == movementPoints[5].position)
+        //{
+        //    disableButtonLeft.SetActive(true);
+        //}
 
-        if (transform.position != movementPoints[selectedMovPoint].position)
+
+        // Moving between points
+        if (transform.position != movementPoints[selectedMovPoint].position || isMoving == true)
         {
             disableButtonRight.SetActive(false);
             disableButtonLeft.SetActive(false);
@@ -147,19 +154,6 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
 
     private void Movement()
     {
-        // Wait until camera has rotated to face the direction of the next point before moving
-        //if (transform.rotation == rotationTargetMove)
-        //{
-        //    // Move until you reach the current object/waypoint, and then stop moving
-        //    if (transform.position != movementPoints[selectedMovPoint].position)
-        //    {
-        //        movSpeed = saveMovSpeed;
-
-        //        Vector3 pos = Vector3.MoveTowards(transform.position, movementPoints[selectedMovPoint].position, movSpeed * Time.deltaTime);
-        //        rigbody.MovePosition(pos);
-        //    }
-        //}
-
         if (transform.position != movementPoints[selectedMovPoint].position)
         {
             if (transform.rotation == rotationTargetMove)
@@ -172,16 +166,19 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
         }
         else
         {
-            isMoving = false;
-
             movSpeed = 0f;
+
+            if (transform.rotation == rotationTargetRotation)
+            {
+                isMoving = false;
+            }
         }
 
     }
 
 
     // Buttons
-    public void PressRight()
+    public void PressForward()
     {
         selectedMovPoint = (selectedMovPoint + 1) % movementPoints.Length;
 
@@ -192,13 +189,13 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
         //disableButtonLeft.SetActive(false);
     }
 
-    public void PressLeft()
+    public void PressBackwards()
     {
         selectedMovPoint = (selectedMovPoint - 1) % movementPoints.Length;
 
         isMoving = true;
 
-        //// Disable buttons on HUD
+        // Disable buttons on HUD
         //disableButtonRight.SetActive(false);
         //disableButtonLeft.SetActive(false);
     }
