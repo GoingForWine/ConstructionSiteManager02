@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 23b38051bc6d56540baa920d9a1cf6cf
-  m_OcclusionCullingData: {fileID: 36300000, guid: f197d0ac98a56f1458012e6d4b624bc7, type: 2}
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -672,7 +672,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 867284039}
         m_TargetAssemblyTypeName: sliderFunctions, Assembly-CSharp
         m_MethodName: Add10
         m_Mode: 1
@@ -10173,7 +10173,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 867284039}
         m_TargetAssemblyTypeName: sliderFunctions, Assembly-CSharp
         m_MethodName: Add50
         m_Mode: 1
@@ -11945,7 +11945,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 867284039}
         m_TargetAssemblyTypeName: sliderFunctions, Assembly-CSharp
         m_MethodName: Negative50
         m_Mode: 1
