@@ -105,6 +105,13 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
         // Movement Point 5
         if (transform.position == movementPoints[5].position)
         {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
+
+        // Movement Point 6
+        if (transform.position == movementPoints[6].position)
+        {
             disableButtonLeft.SetActive(true);
         }
 
@@ -147,19 +154,6 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
 
     private void Movement()
     {
-        // Wait until camera has rotated to face the direction of the next point before moving
-        //if (transform.rotation == rotationTargetMove)
-        //{
-        //    // Move until you reach the current object/waypoint, and then stop moving
-        //    if (transform.position != movementPoints[selectedMovPoint].position)
-        //    {
-        //        movSpeed = saveMovSpeed;
-
-        //        Vector3 pos = Vector3.MoveTowards(transform.position, movementPoints[selectedMovPoint].position, movSpeed * Time.deltaTime);
-        //        rigbody.MovePosition(pos);
-        //    }
-        //}
-
         if (transform.position != movementPoints[selectedMovPoint].position)
         {
             if (transform.rotation == rotationTargetMove)
