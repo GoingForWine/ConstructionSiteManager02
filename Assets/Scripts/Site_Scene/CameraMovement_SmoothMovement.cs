@@ -83,35 +83,49 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
         }
 
 
-        //// Movement Point 2
-        //if (transform.position == movementPoints[2].position)
-        //{
-        //    disableButtonRight.SetActive(true);
-        //    disableButtonLeft.SetActive(true);
-        //}
+        // Movement Point 2
+        if (transform.position == movementPoints[2].position && isMoving == false)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
 
 
-        //// Movement Point 3
-        //if (transform.position == movementPoints[3].position)
-        //{
-        //    disableButtonRight.SetActive(true);
-        //    disableButtonLeft.SetActive(true);
-        //}
+        // Movement Point 3
+        if (transform.position == movementPoints[3].position && isMoving == false)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
 
 
-        //// Movement Point 4
-        //if (transform.position == movementPoints[4].position)
-        //{
-        //    disableButtonRight.SetActive(true);
-        //    disableButtonLeft.SetActive(true);
-        //}
+        // Movement Point 4
+        if (transform.position == movementPoints[4].position && isMoving == false)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
 
 
-        //// Movement Point 5
-        //if (transform.position == movementPoints[5].position)
-        //{
-        //    disableButtonLeft.SetActive(true);
-        //}
+        // Movement Point 5
+        if (transform.position == movementPoints[5].position && isMoving == false)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
+
+        // Movement Point 6
+        if (transform.position == movementPoints[6].position && isMoving == false)
+        {
+            disableButtonRight.SetActive(true);
+            disableButtonLeft.SetActive(true);
+        }
+
+        // Movement Point 7
+        if (transform.position == movementPoints[7].position && isMoving == false)
+        {
+            disableButtonLeft.SetActive(true);
+        }
 
 
         // Moving between points
