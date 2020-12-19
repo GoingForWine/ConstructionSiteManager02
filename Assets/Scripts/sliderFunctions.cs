@@ -23,7 +23,8 @@ public class sliderFunctions : MonoBehaviour
     public bool plus10 = false;
     public bool nega10 = false;
 
-    private int score = 100;
+    [SerializeField]
+    private int score;
 
     void Start()
     {
