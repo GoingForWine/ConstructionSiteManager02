@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation.Examples;
 
-public class CameraMovement : MonoBehaviour
+/// <summary>
+/// This script is still under development
+/// </summary>
+
+public class CameraMovement_BezierCurve : MonoBehaviour
 {
     public GameObject disableButtonRight;
     public GameObject disableButtonLeft;

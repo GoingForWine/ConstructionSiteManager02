@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement_SmoothMovement : MonoBehaviour
+public class CameraMovement_PointToPoint : MonoBehaviour
 {
     [SerializeField]
     private GameObject disableButtonRight;
@@ -197,10 +197,6 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
         selectedMovPoint = (selectedMovPoint + 1) % movementPoints.Length;
 
         isMoving = true;
-
-        // Disable buttons on HUD
-        //disableButtonRight.SetActive(false);
-        //disableButtonLeft.SetActive(false);
     }
 
     public void PressBackwards()
@@ -208,10 +204,6 @@ public class CameraMovement_SmoothMovement : MonoBehaviour
         selectedMovPoint = (selectedMovPoint - 1) % movementPoints.Length;
 
         isMoving = true;
-
-        // Disable buttons on HUD
-        //disableButtonRight.SetActive(false);
-        //disableButtonLeft.SetActive(false);
     }
 }
 
