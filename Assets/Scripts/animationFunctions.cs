@@ -26,21 +26,26 @@ public class animationFunctions : MonoBehaviour
         btn1.onClick.AddListener(responseText1);
         btn2.onClick.AddListener(responseText2);
         btn3.onClick.AddListener(responseText3);
+        //This bool being set as false to get rid of a Unity Error, claimed the bool didn't exist
+        animController.SetBool("StartTalkingBool", false);
     }
 
     // Setting the bools inside the Animation Controller parameter to change to 'true' depending on which button has been pressed
     void responseText1()
     {
         animController.SetBool("Response1Bool", true);
+        animController.SetBool("StartTalkingBool", false);
     }
 
     void responseText2()
     {
         animController.SetBool("Response2Bool", true);
+        animController.SetBool("StartTalkingBool", false);
     }
 
     void responseText3()
     {
         animController.SetBool("Response3Bool", true);
+        animController.SetBool("StartTalkingBool", false);
     }
 }

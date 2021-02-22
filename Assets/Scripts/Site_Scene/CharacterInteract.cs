@@ -6,6 +6,8 @@ public class CharacterInteract : MonoBehaviour
 {
     [SerializeField]
     private GameObject interactMenu;
+    [SerializeField]
+    private Animator animController;
 
     private int hasBeenPressedOnce = 0;
 
@@ -19,6 +21,8 @@ public class CharacterInteract : MonoBehaviour
         {
             //Debug.Log("Press has been registered");
             interactMenu.SetActive(true);
+
+            animController.SetBool("StartTalkingBool", true);
 
             hasBeenPressedOnce++;
 

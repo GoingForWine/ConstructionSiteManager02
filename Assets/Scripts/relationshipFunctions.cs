@@ -12,6 +12,10 @@ public class relationshipFunctions : MonoBehaviour
     private Slider GoodMeter;
     [SerializeField]
     private Slider BadMeter;
+    [SerializeField]
+    private TextMeshProUGUI GoodMeterNum;
+    [SerializeField]
+    private TextMeshProUGUI BadMeterNum;
 
     public choiceEnum ChoiceOutcome = new choiceEnum();
 
@@ -53,5 +57,8 @@ public class relationshipFunctions : MonoBehaviour
             Debug.Log("Recognising 'Bad' Setting");
             ChoiceOutcome = choiceEnum.None;
         }
+
+        GoodMeterNum.text = GoodMeter.value.ToString();
+        BadMeterNum.text = BadMeter.value.ToString();
     }
 }
