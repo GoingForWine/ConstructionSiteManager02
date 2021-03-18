@@ -56,7 +56,7 @@ public class relationshipFunctions : MonoBehaviour
             Debug.Log("Recognising 'Very Good' Setting");
         }
 
-        if (ChoiceOutcome == choiceEnum.Good)
+        else if (ChoiceOutcome == choiceEnum.Good)
         {
             GoodMeterFlo += 1;
             Debug.Log("Recognising 'Good' Setting");
@@ -68,7 +68,7 @@ public class relationshipFunctions : MonoBehaviour
             Debug.Log("Recognising 'Very Bad' Setting");
         }
 
-        if (ChoiceOutcome == choiceEnum.Bad)
+        else if (ChoiceOutcome == choiceEnum.Bad)
         {
             BadMeterFlo += 1;
             Debug.Log("Recognising 'Bad' Setting");
