@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class timeFunction : MonoBehaviour
 {
     // Initialising ints and making the clock attachable inside Unity
-    private int hour = 22;
-    private int minute = 30;
+    public int hour = 22;
+    public int minute = 30;
     [SerializeField]
     private Text clock;
 
-    // creating an unseen timer and couroutine
+    // creating an unseen timer and couroutine inside script
     private float timer = 0;
+
+    public static timeFunction abc;
 
     void Start()
     {
