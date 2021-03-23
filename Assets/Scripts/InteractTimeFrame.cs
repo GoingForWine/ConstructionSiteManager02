@@ -7,50 +7,62 @@ using UnityEngine.UI;
 
 public class InteractTimeFrame : MonoBehaviour
 {
+    // Serializing both the character specific box collider and notification inside of Unity
     [SerializeField]
     private BoxCollider characterBoxCollider;
     [SerializeField]
     private GameObject HeadNotification;
 
+    // Creating a bool for if the Notification is active or not yet
+    private bool NotifBool;
+
+    //Referencing the current time inside the timeFunction script
     public timeFunction tf = new timeFunction();
 
-    [Range(0, 23)]
-    public int hour2 = 0;
-    [Range(0, 59)]
-    public int minute2 = 0;
+    // Start & End Interact Window Times Editor in Unity
+    [Header("Start Hour & Minute >> When The Window Starts")]
+    [Header("v-- 24 hour clock system, please keep minutes to 5, 10, 15 etc. --v")]
+    [Range(00, 23)]
+    public int startHour = 0;
+    [Range(00, 55)]
+    public int startMinute = 0;
+    [Header("End Hour & End Minute >> When The Window Ends")]
+    [Range(00, 23)]
+    public int endHour = 0;
+    [Range(00, 55)]
+    public int endMinute = 0;
 
-    public hourEnum startHour = new hourEnum();
-    public minuteEnum startMinute = new minuteEnum();
-    public hourEnum endHour = new hourEnum();
-    public minuteEnum endMinute = new minuteEnum();
-
-    public enum hourEnum
+    void InteractWindow()
     {
-        Zero = 0, One = 1, Two = 2, Three = 3, Four = 4,
-        Five = 5, Six = 6, Seven = 7, Eight = 8,
-        Nine = 9, Ten = 10, Eleven = 11, Twelve = 12, 
-        Thirteen = 13, Fourteen = 14, Fifteen = 15, Sixteen = 16, 
-        Seventeen = 17, Eighteen = 18, Nineteen = 19, Twenty = 20, 
-        TwentyOne = 21, TwentyTwo = 22, TwentyThree = 23
-    }
-
-    public enum minuteEnum
-    {
-        Zero = 0, Five = 5, Ten = 10, Fifteen = 15,
-        Twenty = 20, TwentyFive = 25, Thirty = 30, ThirtyFive = 35, 
-        Forty = 40, FortyFive = 45, Fifty = 50, FiftyFive = 55
-    }
-
-    void Update()
-    {
-        if (startHour == hourEnum.TwentyThree && tf.hour == 23)
+        // Setting what each bool rule follows
+        // NOTE: I tried using else + else if, but it acted funny, so, sorry for the nooby coding here lmfao
+        if (NotifBool == true)
         {
             HeadNotification.SetActive(true);
-        }   else
+            characterBoxCollider.enabled = true;
+        }
+            
+        if (NotifBool == false)
         {
             HeadNotification.SetActive(false);
+            characterBoxCollider.enabled = false;
         }
 
-        //if (startHour == hour)
+        // If the referenced time from the timeFunction matches up with the Start hour & minute inside Unity, bool is switched to true
+        if (startHour == tf.hour && startMinute == tf.minute)
+        {
+            NotifBool = true;  
+        }
+        // If the referenced time from the timeFunction matches up with the End hour & minute inside Unity, bool is switched to false
+        else if (endHour == tf.hour && endMinute == tf.minute)
+        {
+            NotifBool = false;
+        }
+    }
+
+    // Simply running the method and constantly updating, checking for changes
+    void Update()
+    {
+        InteractWindow();
     }
 }

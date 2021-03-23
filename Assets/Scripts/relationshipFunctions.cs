@@ -26,6 +26,8 @@ public class relationshipFunctions : MonoBehaviour
     // enum created to give designers an easier time game designing
     public choiceEnum ChoiceOutcome = new choiceEnum();
 
+    public animationChoices AnimationNeeded = new animationChoices();
+
     public enum choiceEnum
     {
         VeryGood,
@@ -33,6 +35,18 @@ public class relationshipFunctions : MonoBehaviour
         VeryBad,
         Bad,
         None
+    }
+
+    public enum animationChoices
+    {
+        PleaseChooseAnOption, 
+        Happy, 
+        Sad, 
+        Confused, 
+        Angry, 
+        Tired, 
+        Scared, 
+        NoAnimation
     }
 
     void Start()
