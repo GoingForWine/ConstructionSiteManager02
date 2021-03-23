@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TypeWriterEffect : MonoBehaviour
 {
+    [Header("Here is where you enter the text that will show when pressing the respected button")]
     public float delay = 0.05f;
     public string fullText;
     private string currentText = "";
