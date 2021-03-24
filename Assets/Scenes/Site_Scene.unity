@@ -5603,7 +5603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well move it, the other boys can't get their vehicles in
+  m_text: Well move it, the other boys can't get their equipment past
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18802,7 +18802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750495894}
   m_Layer: 5
-  m_Name: Timber_Scenario_Forklift
+  m_Name: Timber_Scenario_Crane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25673,7 +25673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mittens said you brought a forklift in could I borrow it?
+  m_text: Mittens said you brought a crane in could I borrow it?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30067,8 +30067,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'Can''t say I saw anything boss was quite busy this morning. I did see
-    Bert and his boys bring in a forklift '
+  fullText: Can't say I saw anything boss was quite busy this morning. I did see
+    Bert and his boys bring in a crane
 --- !u!114 &1143962666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32354,7 +32354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The forklift is waiting to be used
+  m_text: The crane is waiting to be used
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -39607,7 +39607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481920137}
   m_Layer: 5
-  m_Name: If_Speaks_To_Forklift_Before_Key
+  m_Name: If_Speaks_To_Crane_Before_Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44422,7 +44422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1646303612}
   m_Layer: 5
-  m_Name: If_Speaks_To_Forklift_After_Key
+  m_Name: If_Speaks_To_Crane_After_Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52278,7 +52278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The forklift! I can use this to move the timber
+  m_text: The crane! I can use this to move the timber
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
