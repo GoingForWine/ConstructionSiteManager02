@@ -30764,7 +30764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: Can't say i have boss sorry
+  fullText: 'Can''t say I have boss sorry  '
 --- !u!114 &1408912419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32434,7 +32434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: '*Terrance continues to work*'
+  fullText: '*Terrance continues to work*  '
 --- !u!114 &1503116543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42489,7 +42489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'AHHHH... oh hey boss it''s you sorry you scared me there  '
+  fullText: 'AHHHH... oh hey boss it''s you sorry you scared me there    '
 --- !u!114 &2021331270
 MonoBehaviour:
   m_ObjectHideFlags: 0
