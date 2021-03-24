@@ -3993,7 +3993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: Fine but its not because I want to
+  fullText: 'Fine but its not because I want to  '
 --- !u!114 &206121233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13070,7 +13070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: Fine... I'll move it
+  fullText: Fine... I'll move it just get that owl out my site
 --- !u!114 &626243351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27439,8 +27439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: You mean the timber we were forced to leave there casue how how much
-    space that owl takes up?
+  fullText: 'You mean the timber we were forced to leave there casue how how much
+    space that owl takes up?  '
 --- !u!114 &1165529435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28648,7 +28648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'Yeah we left it there this morning boss do you need it moved?  '
+  fullText: 'Yeah we left it there this morning boss do you need it moved?   '
 --- !u!114 &1217522658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33288,7 +33288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'We''ve got a lot of work to do but I''ll get it moved boss don''t worry  '
+  fullText: 'We''ve got a lot of work to do but I''ll get it moved boss don''t worry   '
 --- !u!114 &1433599528
 MonoBehaviour:
   m_ObjectHideFlags: 0
