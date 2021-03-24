@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 75af96b863d25e740a2fd4ba6e8994d1
+guid: 11fb86168aa4c274284ed8ffc63b6fe3
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
@@ -62,8 +62,8 @@ ModelImporter:
       name: Idle
       takeName: Take 001
       internalID: 0
-      firstFrame: 160
-      lastFrame: 458
+      firstFrame: 140
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -91,8 +91,8 @@ ModelImporter:
       name: Idle + Talk
       takeName: Take 001
       internalID: 0
-      firstFrame: 460
-      lastFrame: 757
+      firstFrame: 210
+      lastFrame: 270
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -121,7 +121,7 @@ ModelImporter:
       takeName: Take 001
       internalID: 0
       firstFrame: 0
-      lastFrame: 59
+      lastFrame: 58
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -150,7 +150,7 @@ ModelImporter:
       takeName: Take 001
       internalID: 0
       firstFrame: 60
-      lastFrame: 158
+      lastFrame: 133
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -178,8 +178,8 @@ ModelImporter:
       name: Shake Head
       takeName: Take 001
       internalID: 0
-      firstFrame: 760
-      lastFrame: 814
+      firstFrame: 280
+      lastFrame: 334
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -207,8 +207,8 @@ ModelImporter:
       name: Happy
       takeName: Take 001
       internalID: 0
-      firstFrame: 820
-      lastFrame: 907
+      firstFrame: 340
+      lastFrame: 428
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -236,8 +236,8 @@ ModelImporter:
       name: Sad
       takeName: Take 001
       internalID: 0
-      firstFrame: 910
-      lastFrame: 994
+      firstFrame: 430
+      lastFrame: 514
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -265,8 +265,8 @@ ModelImporter:
       name: Confused
       takeName: Take 001
       internalID: 0
-      firstFrame: 1000
-      lastFrame: 1060
+      firstFrame: 520
+      lastFrame: 580
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -294,8 +294,8 @@ ModelImporter:
       name: Tired
       takeName: Take 001
       internalID: 0
-      firstFrame: 1070
-      lastFrame: 1321
+      firstFrame: 590
+      lastFrame: 840
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
