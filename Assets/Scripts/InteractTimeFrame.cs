@@ -11,10 +11,10 @@ public class InteractTimeFrame : MonoBehaviour
     [SerializeField]
     private BoxCollider characterBoxCollider;
     [SerializeField]
-    public GameObject HeadNotification;
+    private GameObject HeadNotification;
 
     // Creating a bool for if the Notification is active or not yet
-    public bool NotifBool;
+    private bool NotifBool;
 
     //Referencing the current time inside the timeFunction script
     public timeFunction tf = new timeFunction();

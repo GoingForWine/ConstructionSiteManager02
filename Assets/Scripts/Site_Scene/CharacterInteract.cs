@@ -9,8 +9,6 @@ public class CharacterInteract : MonoBehaviour
     [SerializeField]
     private Animator animController;
 
-    public InteractTimeFrame not = new InteractTimeFrame();
-
     private int hasBeenPressedOnce = 0;
 
     
@@ -21,10 +19,10 @@ public class CharacterInteract : MonoBehaviour
 
         if (hasBeenPressedOnce == 1)
         {
+            //Debug.Log("Press has been registered");
             interactMenu.SetActive(true);
 
             animController.SetBool("StartTalkingBool", true);
-            not.NotifBool = false;
 
             hasBeenPressedOnce++;
 
