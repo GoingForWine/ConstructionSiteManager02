@@ -3856,7 +3856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.05
   fullText: 'Bert: Boss you''ve been on my back all day but i swear I''d have such
-    an easier time getting the job done'
+    an easier time getting the job done *What should i do?* '
 --- !u!114 &164148952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29306,7 +29306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'Albert: Fine boss well good luck with the foundations I''m gone'
+  fullText: 'Albert: Fine boss well good luck with the foundations I''m gone  '
 --- !u!114 &1125981814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39476,7 +39476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.05
-  fullText: 'Bert: And yet again you choose him. You know what boss I''m out'
+  fullText: 'Bert: And yet again you choose him. You know what boss I''m out  '
 --- !u!114 &1475896634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51717,7 +51717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.05
   fullText: 'Albert: Boss stay out of this this furball has been bothering me all
-    day about space'
+    day about space  '
 --- !u!114 &1913026748
 MonoBehaviour:
   m_ObjectHideFlags: 0
