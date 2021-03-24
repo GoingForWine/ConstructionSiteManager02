@@ -6509,8 +6509,8 @@ RectTransform:
   m_Children:
   - {fileID: 1108401633}
   - {fileID: 1092144860}
-  m_Father: {fileID: 1059849129}
-  m_RootOrder: 7
+  m_Father: {fileID: 618589950}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15175,7 +15175,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 253480569}
   m_Father: {fileID: 1059849129}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27500,7 +27501,6 @@ RectTransform:
   - {fileID: 674553968}
   - {fileID: 1638686856}
   - {fileID: 1988311887}
-  - {fileID: 253480569}
   m_Father: {fileID: 153784418}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38578,7 +38578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421072872}
   m_Layer: 5
-  m_Name: rio_Uncomplete_Side_Side_Scenario
+  m_Name: Terrance_Side_Scenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56734,7 +56734,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1125981812}
+      - m_Target: {fileID: 1475896631}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -56770,7 +56770,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 1125981813}
+      - m_Target: {fileID: 1475896633}
         m_TargetAssemblyTypeName: TypeWriterEffect, Assembly-CSharp
         m_MethodName: Start
         m_Mode: 1
